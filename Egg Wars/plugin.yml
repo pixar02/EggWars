@@ -12,7 +12,7 @@ commands:
     
 permissions:
   ew.*:
-    description: Gives access to all eg commands
+    description: Gives access to all ew commands
     children:
       ew.play: true
       ew.maps: true
