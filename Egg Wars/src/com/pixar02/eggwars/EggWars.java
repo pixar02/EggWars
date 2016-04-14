@@ -6,7 +6,7 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class EggWars extends JavaPlugin {
-
+    
 	public void onEnable(){
 		PluginDescriptionFile pdfFile = getDescription();
 		Logger logger = Logger.getLogger("Minecraft");
@@ -29,4 +29,5 @@ public class EggWars extends JavaPlugin {
 		saveConfig();
 		
 	}
+
 }
