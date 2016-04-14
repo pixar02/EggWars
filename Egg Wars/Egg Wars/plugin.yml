@@ -1,0 +1,21 @@
+name: EggWars
+main: com.pixar02.eggwars.EggWars
+version: 1.0
+depend: [Vault]
+softdepend: [Multiverse-core]
+
+commands:
+  ew:
+    description: This is the main plugin command.
+    aliases: [eggwars]
+    usage: /<command> [args]
+    
+permissions:
+  ew.*:
+    description: Gives access to all ew commands
+    children:
+      ew.play: true
+      ew.maps: true
+      ew.signs: true
+      ew.spectate: true
+      ew.start: true
