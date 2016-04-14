@@ -24,7 +24,7 @@ public class EggWars extends JavaPlugin {
 		logger.info(pdfFile.getName() + "Version:" + pdfFile.getVersion() + " has been disabled");
 	}
 	
-	public void registerConfig(){
+	private void registerConfig(){
 		getConfig().options().copyDefaults(true);
 		saveConfig();
 		
