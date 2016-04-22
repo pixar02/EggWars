@@ -3,6 +3,7 @@ package com.pixar02.eggwars.commands;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -52,8 +53,21 @@ public class CmdManager implements CommandExecutor {
 	}
 	@Override
 	public boolean onCommand(CommandSender s, Command command, String label, String[] args) {
-		// TODO Auto-generated method stub
+		if(args.length==0 || getCommands(args[0]) == null ){
+			s.sendMessage(ChatColor.GRAY + "-------------------[" + ChatColor.RED + "EggWars" + ChatColor.GRAY + "]------------------");
+			for (BaseCmd cmd : cmds) {
+				
+			}
+			
+		}
 		return false;
 	}
-
+	private BaseCmd getCommands(String s) {
+		for (BaseCmd cmd : cmds) {
+			if (cmd.cmdName.equalsIgnoreCase(s)) {
+				return cmd;
+			}
+		}
+		return null;
+	}
 }
